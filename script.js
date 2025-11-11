@@ -75,3 +75,42 @@ document.querySelectorAll('.project-card, .skill-category, .about-content, .cont
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Typewriter effect for hero subtitle (non-destructive)
+document.addEventListener('DOMContentLoaded', () => {
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (!subtitle) return;
+
+    const fullText = subtitle.textContent.trim();
+    // If there's no text or it's already empty, do nothing
+    if (!fullText) return;
+
+    // Clear current text and prepare cursor style (insert once)
+    subtitle.textContent = '';
+    if (!document.getElementById('typewriter-cursor-style')) {
+        const styleEl = document.createElement('style');
+        styleEl.id = 'typewriter-cursor-style';
+        styleEl.innerHTML = `
+            .typewriter-cursor { display: inline-block; width: 0.6ch; animation: tw-blink 1s steps(2,end) infinite; }
+            @keyframes tw-blink { 50% { opacity: 0 } }
+        `;
+        document.head.appendChild(styleEl);
+    }
+
+    let i = 0;
+    const speed = 60; // milliseconds per character (tweak as needed)
+
+    function type() {
+        if (i <= fullText.length) {
+            subtitle.innerHTML = fullText.slice(0, i) + '<span class="typewriter-cursor">|</span>';
+            i++;
+            setTimeout(type, speed);
+        } else {
+            // finished typing — remove the cursor after a short pause
+            setTimeout(() => { subtitle.innerHTML = fullText; }, 600);
+        }
+    }
+
+    // Start typing shortly after DOM is ready to allow hero layout to settle
+    setTimeout(type, 300);
+});
