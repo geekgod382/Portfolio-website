@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let i = 0;
-    const speed = 60; // milliseconds per character (tweak as needed)
+    const speed = 70; // milliseconds per character (tweak as needed)
 
     function type() {
         if (i <= fullText.length) {
