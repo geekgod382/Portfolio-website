@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manan Sharma - Software Developer Portfolio">
-    <title>Manan Sharma | Software Developer</title>
+    <title>Manan Sharma | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="logo/png" href="logo.png">
-
-    
 </head>
 <body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">Manan Sharma</div>
@@ -25,39 +25,53 @@
 
     <section id="hero" class="hero">
         <div class="container">
-            <h1 class="hero-title">
-                <span class="greeting">Hi, I'm</span>
-                <span class="name">Manan Sharma</span>
-            </h1>
-            <p class="hero-subtitle">Backend Software Developer</p>
-            <p class="hero-description">
-                Building elegant solutions to complex problems
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi, I'm</span>
+                        <span class="name">Manan Sharma</span>
+                    </h1>
+                    <p class="hero-subtitle">Backend Software Engineer</p>
+                    <p class="hero-description">
+                        Idk what should I write here, but welcome to my portfolio!
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <div class="photo-wrapper">
+                        <img src="pic1 (2).jpg" alt="Manan Sharma" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- About: right border accent -->
+    <section id="about" class="about section-accent-right">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    I'm a passionate software developer with expertise in building 
-                    scalable applications and solving complex technical challenges. 
-                    I love clean code, elegant design, and continuous learning.
+                    I'm a self taught software engineer from India, currently persuing
+                    B.Tech in Electronics and Communications Engineering at IIT Bhubaneswar.
+                    I'm interested in systems programming, backend development, and developer tools.
+                    I enjoy building scalable applications and solving complex technical challenges.
+                    I am curious to learn fast, adapt, and work in collaborative environments
                 </p>
                 <p>
                     When I'm not coding, you'll find me exploring new technologies, 
                     contributing to open source, or sharing knowledge with the developer community.
+                    (Or doing the most boring thing possible, college assignments :P)
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- Projects: left border accent -->
+    <section id="projects" class="projects section-accent-left">
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
@@ -107,9 +121,13 @@
                 </div>
             </div>
         </div>
+        <p class="os">
+            Btw, I also built an OS kernel from scratch 😎
+        </p>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- Skills: right border accent -->
+    <section id="skills" class="skills section-accent-right">
         <div class="container">
             <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
@@ -148,14 +166,19 @@
                 </div>
             </div>
         </div>
+
+        <p class="devil">
+            I have some other skills too, but they are not meant to be showcased here.
+        </p>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- Contact: left border accent -->
+    <section id="contact" class="contact section-accent-left">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="contact-description">
                 I'm always open to new opportunities and interesting projects.
-                Feel free to reach out!
+                Feel free to reach out! 😃
             </p>
             <div class="contact-links">
                 <a href="mailto:manan140306@gmail.com" class="contact-link">

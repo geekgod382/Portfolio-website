@@ -1,3 +1,45 @@
+// Gaming cursor
+const dot = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX + 'px';
+    dot.style.top = mouseY + 'px';
+    dot.classList.remove('hidden');
+    ring.classList.remove('hidden');
+});
+
+// Smooth trailing ring
+function animateRing() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    ring.style.left = ringX + 'px';
+    ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Click feedback
+document.addEventListener('mousedown', () => dot.classList.add('clicking'));
+document.addEventListener('mouseup', () => dot.classList.remove('clicking'));
+
+// Expand ring on hoverable elements
+document.querySelectorAll('a, button, .btn, .project-card, .contact-link').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+});
+
+// Hide cursor when mouse leaves window
+document.addEventListener('mouseleave', () => {
+    dot.classList.add('hidden');
+    ring.classList.add('hidden');
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -48,7 +90,7 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href').slice(1) === current) {
             link.style.color = 'var(--accent)';
         } else {
-            link.style.color = 'var(--text-secondary)';
+            link.style.color = 'var(--purple)';
         }
     });
 });
