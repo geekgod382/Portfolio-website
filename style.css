@@ -347,6 +347,13 @@ section {
     line-height: 1.6;
 }
 
+.link-to-pr-reviewer {
+    color: var(--text-secondary);
+    margin-top: 4.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
 .tag {
     padding: 0.4rem 0.8rem;
     background-color: var(--bg-tertiary);
