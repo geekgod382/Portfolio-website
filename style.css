@@ -340,9 +340,9 @@ section {
     gap: 0.5rem;
 }
 
-.link-to-code-editor {
+.link-to-cxgrd {
     color: var(--text-secondary);
-    margin-top: 1.5rem;
+    margin-top: 7rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
