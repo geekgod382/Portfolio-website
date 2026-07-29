@@ -3,212 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manan Sharma - Software Developer Portfolio">
+    <meta name="description" content="Manan Sharma — Backend Software Engineer. Building scalable systems, developer tools, and backend infrastructure.">
     <title>Manan Sharma | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="logo/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Manan Sharma</div>
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">
+                <span class="nav-brand-accent">&lt;</span>MS<span class="nav-brand-accent">/&gt;</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><span class="nav-index">01.</span> About</a></li>
+                <li><a href="#projects"><span class="nav-index">02.</span> Projects</a></li>
+                <li><a href="#skills"><span class="nav-index">03.</span> Skills</a></li>
+                <li><a href="#contact"><span class="nav-index">04.</span> Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="greeting">Hi, I'm</span>
-                        <span class="name">Manan Sharma</span>
-                    </h1>
-                    <p class="hero-subtitle">Backend Software Engineer</p>
-                    <p class="hero-description">
-                        Idk what should I write here, but welcome to my portfolio!
-                    </p>
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-text">
+                        <p class="hero-greeting fade-up">Hi, I'm</p>
+                        <h1 class="hero-title fade-up" style="--delay: 0.1s">Manan Sharma</h1>
+                        <p class="hero-subtitle fade-up" style="--delay: 0.2s">Backend Software Engineer</p>
+                        <p class="hero-description fade-up" style="--delay: 0.3s">
+                            I build scalable backend systems and developer tools.
+
+                        </p>
+                        <div class="hero-cta fade-up" style="--delay: 0.4s">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-photo fade-up" style="--delay: 0.25s">
+                        <div class="photo-wrapper">
+                            <div class="photo-glow" aria-hidden="true"></div>
+                            <img src="pic1 (2).jpg" alt="Manan Sharma" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+                        </div>
                     </div>
                 </div>
-                <div class="hero-photo">
-                    <div class="photo-wrapper">
-                        <img src="pic1 (2).jpg" alt="Manan Sharma" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
-                    </div>
+                <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
+                    <span class="scroll-hint-line"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title reveal">
+                    <span class="section-index">01.</span> About Me
+                </h2>
+                <div class="about-content reveal">
+                    <p>
+                        I'm a self taught software engineer from India, currently persuing
+                        B.Tech in Electronics and Communications Engineering at IIT Bhubaneswar.
+                        I'm interested in systems programming, backend development, and developer tools.
+                        I enjoy building scalable applications and solving complex technical challenges.
+                        I am curious to learn fast, adapt, and work in collaborative environments
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies,
+                        contributing to open source, or sharing knowledge with the developer community.
+                        (Or doing the most boring thing possible, college assignments :P)
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About: right border accent -->
-    <section id="about" class="about section-accent-right">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I'm a self taught software engineer from India, currently persuing
-                    B.Tech in Electronics and Communications Engineering at IIT Bhubaneswar.
-                    I'm interested in systems programming, backend development, and developer tools.
-                    I enjoy building scalable applications and solving complex technical challenges.
-                    I am curious to learn fast, adapt, and work in collaborative environments
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title reveal">
+                    <span class="section-index">02.</span> Projects
+                </h2>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                            <a href="https://cxgrd.com" target="_blank" rel="noopener" class="project-external" aria-label="Visit CXGRD">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="project-title">CXGRD</h3>
+                        <p class="project-description">
+                            Automated Architectural Guardrail for people building
+                            with AI. Move fast with AI without breaking your
+                            codebase's architecture
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">NextJS</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <a href="https://prreviewr.com/" target="_blank" rel="noopener" class="project-external" aria-label="Visit AutoPR Reviewer">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                        </div>
+                        <h3 class="project-title">AutoPR Reviewer</h3>
+                        <p class="project-description">
+                            An AI-powered PR review assistant that analyzes code changes,
+                            provides feedback, and suggests improvements to enhance code quality.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Supabase</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                <polyline points="13 2 13 9 20 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="project-title">File-system MCP server</h3>
+                        <p class="project-description">
+                            A MCP server that provides comprehensive file system
+                            access and operations. This server allows AI assistants
+                            to interact with your file system through a standardized interface.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Model Context Protocol</span>
+                        </div>
+                    </article>
+                </div>
+                <p class="section-note reveal">
+                    Btw, I also built an OS kernel from scratch 😎
                 </p>
-                <p>
-                    When I'm not coding, you'll find me exploring new technologies, 
-                    contributing to open source, or sharing knowledge with the developer community.
-                    (Or doing the most boring thing possible, college assignments :P)
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title reveal">
+                    <span class="section-index">03.</span> Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category reveal">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>Python</li>
+                            <li>Kotlin</li>
+                            <li>C language</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js / Express</li>
+                            <li>Django / Flask / FastAPI</li>
+                            <li>MySQL / MongoDB</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Tools & Others</h3>
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Tensorflow</li>
+                            <li>Keras</li>
+                            <li>Scikit-Learn</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="section-note reveal">
+                    I have some other skills too, but they are not meant to be showcased here.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects: left border accent -->
-    <section id="projects" class="projects section-accent-left">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">CXGRD</h3>
-                    <p class="project-description">
-                        Automated Architectural Guardrail for people building
-                        with AI. Move fast with AI without breaking your 
-                        codebase's architecture
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">NextJS</span>
-                        <span class="tag">Supabase</span>
-                    </div>
-                    <div class="link-to-cxgrd">
-                        <a style="color: white;" href="https://cxgrd.com">Check it out here</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">AutoPR Reviewer</h3>
-                    <p class="project-description">
-                        An AI-powered PR review assistant that analyzes code changes,
-                        provides feedback, and suggests improvements to enhance code quality.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Supabase</span>
-                    </div>
-                    <div class="link-to-pr-reviewer">
-                        <a style="color: white; padding-top: 5px;" href="https://prreviewr.com/">Check it out here</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">File-system MCP server</h3>
-                    <p class="project-description">
-                        A MCP server that provides comprehensive file system
-                        access and operations. This server allows AI assistants
-                        to interact with your file system through a standardized interface.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Model Context Protocol</span>
-                    </div>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title reveal">
+                    <span class="section-index">04.</span> Get In Touch
+                </h2>
+                <p class="contact-description reveal">
+                    I'm always open to new opportunities and interesting projects.
+                    Feel free to reach out!
+                </p>
+                <div class="contact-links reveal">
+                    <a href="mailto:manan140306@gmail.com" class="contact-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://github.com/geekgod382" class="contact-link" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/manan-sharma-641276310/" class="contact-link" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
-        </div>
-        <p class="os">
-            Btw, I also built an OS kernel from scratch 😎
-        </p>
-    </section>
-
-    <!-- Skills: right border accent -->
-    <section id="skills" class="skills section-accent-right">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>Kotlin</li>
-                        <li>C language</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js / Express</li>
-                        <li>Django / Flask / FastAPI</li>
-                        <li>MySQL / MongoDB</li>
-                        <li>REST APIs</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <ul>
-                        <li>Git / GitHub</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        <li>Tensorflow</li>
-                        <li>Keras</li>
-                        <li>Scikit-Learn</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <p class="devil">
-            I have some other skills too, but they are not meant to be showcased here.
-        </p>
-    </section>
-
-    <!-- Contact: left border accent -->
-    <section id="contact" class="contact section-accent-left">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-description">
-                I'm always open to new opportunities and interesting projects.
-                Feel free to reach out! 😃
-            </p>
-            <div class="contact-links">
-                <a href="mailto:manan140306@gmail.com" class="contact-link">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Email
-                </a>
-                <a href="https://github.com/geekgod382" class="contact-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/manan-sharma-641276310/" class="contact-link" target="_blank">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Manan Sharma. All rights reserved.</p>
+            <p>Built by Manan Sharma &middot; &copy; 2026</p>
         </div>
     </footer>
 
