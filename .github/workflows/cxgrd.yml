@@ -22,6 +22,11 @@ jobs:
       - name: Install cxgrd
         run: npm install -g cxgrd
 
+      - name: Run cxgrd scan
+        run: cxgrd scan
+        env:
+          CXGRD_AUTH_TOKEN: ${{ secrets.CXGRD_AUTH_TOKEN }}
+
       - name: Run cxgrd check
         run: cxgrd check --ci
         env:

@@ -9,6 +9,7 @@
     <link rel="icon" type="logo/png" href="logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <nav class="navbar">
         <div class="container nav-inner">
             <a href="#" class="nav-brand">
-                <span class="nav-brand-accent">&lt;</span>MS<span class="nav-brand-accent">/&gt;</span>
+                <span class="nav-brand-accent">&lt;</span>GeekGod382<span class="nav-brand-accent">/&gt;</span>
             </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -49,12 +50,6 @@
                             <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                         </div>
                     </div>
-                    <div class="hero-photo fade-up" style="--delay: 0.25s">
-                        <div class="photo-wrapper">
-                            <div class="photo-glow" aria-hidden="true"></div>
-                            <img src="pic1 (2).jpg" alt="Manan Sharma" onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
-                        </div>
-                    </div>
                 </div>
                 <a href="#about" class="scroll-hint" aria-label="Scroll to about section">
                     <span class="scroll-hint-line"></span>
@@ -62,34 +57,34 @@
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title reveal">
-                    <span class="section-index">01.</span> About Me
-                </h2>
-                <div class="about-content reveal">
-                    <p>
-                        I'm a self taught software engineer from India, currently persuing
-                        B.Tech in Electronics and Communications Engineering at IIT Bhubaneswar.
-                        I'm interested in systems programming, backend development, and developer tools.
-                        I enjoy building scalable applications and solving complex technical challenges.
-                        I am curious to learn fast, adapt, and work in collaborative environments
-                    </p>
-                    <p>
-                        When I'm not coding, you'll find me exploring new technologies,
-                        contributing to open source, or sharing knowledge with the developer community.
-                        (Or doing the most boring thing possible, college assignments :P)
-                    </p>
+        <div class="content-panel">
+            <section id="about" class="about">
+                <div class="container">
+                    <h2 class="section-title reveal">
+                        <span class="section-index">01.</span> About Me
+                    </h2>
+                    <div class="about-content reveal">
+                        <p>
+                            I'm a self taught software engineer from India.
+                            I'm interested in systems programming, backend development, and developer tools.
+                            I enjoy building scalable applications and solving complex technical challenges.
+                            I am curious to learn fast, adapt, and work in collaborative environments
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring new technologies,
+                            contributing to open source, or sharing knowledge with the developer community.
+                            (Or doing the most boring thing possible, college assignments :P)
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title reveal">
-                    <span class="section-index">02.</span> Projects
-                </h2>
-                <div class="projects-grid">
+            <section id="projects" class="projects">
+                <div class="container">
+                    <h2 class="section-title reveal">
+                        <span class="section-index">02.</span> Projects
+                    </h2>
+                    <div class="projects-grid">
                     <article class="project-card reveal">
                         <div class="project-header">
                             <svg class="project-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -150,6 +145,13 @@
                                 <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
                                 <polyline points="13 2 13 9 20 9"></polyline>
                             </svg>
+                            <a href="https://github.com/geekgod382/filesystem-mcp-server" target="_blank" rel="noopener" class="project-external" aria-label="Visit File-system MCP server">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
                         </div>
                         <h3 class="project-title">File-system MCP server</h3>
                         <p class="project-description">
@@ -162,70 +164,77 @@
                             <span class="tag">Model Context Protocol</span>
                         </div>
                     </article>
+                    </div>
+                    <p class="section-note reveal">
+                        Btw, I also built an OS kernel from scratch 😎
+                    </p>
                 </div>
-                <p class="section-note reveal">
-                    Btw, I also built an OS kernel from scratch 😎
-                </p>
-            </div>
-        </section>
+            </section>
 
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title reveal">
-                    <span class="section-index">03.</span> Skills
-                </h2>
-                <div class="skills-grid">
+            <section id="skills" class="skills">
+                <div class="container">
+                    <h2 class="section-title reveal">
+                        <span class="section-index">03.</span> Skills
+                    </h2>
+                    <div class="skills-grid">
                     <div class="skill-category reveal">
                         <h3>Languages</h3>
                         <ul>
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>Python</li>
-                            <li>Kotlin</li>
-                            <li>C language</li>
+                            <li title="JavaScript"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><span class="sr-only">JavaScript</span></li>
+                            <li title="TypeScript"><i class="devicon-typescript-plain colored" aria-hidden="true"></i><span class="sr-only">TypeScript</span></li>
+                            <li title="Python"><i class="devicon-python-plain colored" aria-hidden="true"></i><span class="sr-only">Python</span></li>
+                            <li title="Kotlin"><i class="devicon-kotlin-plain colored" aria-hidden="true"></i><span class="sr-only">Kotlin</span></li>
+                            <li title="C"><i class="devicon-c-plain colored" aria-hidden="true"></i><span class="sr-only">C</span></li>
                         </ul>
                     </div>
                     <div class="skill-category reveal">
                         <h3>Backend</h3>
                         <ul>
-                            <li>Node.js / Express</li>
-                            <li>Django / Flask / FastAPI</li>
-                            <li>MySQL / MongoDB</li>
-                            <li>REST APIs</li>
+                            <li title="Node.js"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i><span class="sr-only">Node.js</span></li>
+                            <li title="Express"><i class="devicon-express-original" aria-hidden="true"></i><span class="sr-only">Express</span></li>
+                            <li title="Django"><i class="devicon-django-plain colored" aria-hidden="true"></i><span class="sr-only">Django</span></li>
+                            <li title="Flask"><i class="devicon-flask-original" aria-hidden="true"></i><span class="sr-only">Flask</span></li>
+                            <li title="FastAPI"><i class="devicon-fastapi-plain colored" aria-hidden="true"></i><span class="sr-only">FastAPI</span></li>
+                            <li title="MySQL"><i class="devicon-mysql-plain colored" aria-hidden="true"></i><span class="sr-only">MySQL</span></li>
                         </ul>
                     </div>
                     <div class="skill-category reveal">
                         <h3>Tools & Others</h3>
                         <ul>
-                            <li>Git / GitHub</li>
-                            <li>Docker</li>
+                            <li title="Git"><i class="devicon-git-plain colored" aria-hidden="true"></i><span class="sr-only">Git</span></li>
+                            <li title="GitHub"><i class="devicon-github-original" aria-hidden="true"></i><span class="sr-only">GitHub</span></li>
+                            <li title="Docker"><i class="devicon-docker-plain colored" aria-hidden="true"></i><span class="sr-only">Docker</span></li>
+                            <li title="Visual Studio"><i class="devicon-vscode-plain colored" aria-hidden="true"></i><span class="sr-only">Visual Studio</span></li>
+                            <li title="Android Studio"><i class="devicon-androidstudio-plain colored" aria-hidden="true"></i><span class="sr-only">Android Studio</span></li>
+                            <li title="Postman"><i class="devicon-postman-plain colored" aria-hidden="true"></i><span class="sr-only">Postman</span></li>
+                            <li title="PyCharm"><i class="devicon-pycharm-plain colored" aria-hidden="true"></i><span class="sr-only">PyCharm</span></li>
                         </ul>
                     </div>
                     <div class="skill-category reveal">
                         <h3>Frameworks</h3>
                         <ul>
-                            <li>Tensorflow</li>
-                            <li>Keras</li>
-                            <li>Scikit-Learn</li>
+                            <li title="TensorFlow"><i class="devicon-tensorflow-original colored" aria-hidden="true"></i><span class="sr-only">TensorFlow</span></li>
+                            <li title="Keras"><i class="devicon-keras-plain colored" aria-hidden="true"></i><span class="sr-only">Keras</span></li>
+                            <li title="Scikit-learn"><i class="devicon-scikitlearn-plain colored" aria-hidden="true"></i><span class="sr-only">Scikit-learn</span></li>
                         </ul>
                     </div>
                 </div>
-                <p class="section-note reveal">
-                    I have some other skills too, but they are not meant to be showcased here.
-                </p>
-            </div>
-        </section>
+                    <p class="section-note reveal">
+                        I have some other skills too, but they are not meant to be showcased here.
+                    </p>
+                </div>
+            </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title reveal">
-                    <span class="section-index">04.</span> Get In Touch
-                </h2>
-                <p class="contact-description reveal">
-                    I'm always open to new opportunities and interesting projects.
-                    Feel free to reach out!
-                </p>
-                <div class="contact-links reveal">
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2 class="section-title reveal">
+                        <span class="section-index">04.</span> Get In Touch
+                    </h2>
+                    <p class="contact-description reveal">
+                        I'm always open to new opportunities and interesting projects.
+                        Feel free to reach out!
+                    </p>
+                    <div class="contact-links reveal">
                     <a href="mailto:manan140306@gmail.com" class="contact-link">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -245,16 +254,17 @@
                         </svg>
                         LinkedIn
                     </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>Built by Manan Sharma &middot; &copy; 2026</p>
+            <footer class="footer">
+                <div class="container">
+                    <p>Built by Manan Sharma &middot; &copy; 2026</p>
+                </div>
+            </footer>
         </div>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
     <script>
