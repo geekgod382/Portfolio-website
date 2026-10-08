@@ -320,7 +320,6 @@ section {
     text-align: center;
     font-size: 0.95rem;
     color: var(--text-muted);
-    font-style: italic;
 }
 
 /* ── About ── */
@@ -427,7 +426,7 @@ section {
 /* ── Skills ── */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 1.25rem;
 }
 
@@ -456,7 +455,7 @@ section {
 .skill-category ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
     gap: 0.55rem;
 }
 
@@ -696,8 +695,7 @@ section {
         display: none;
     }
 
-    .projects-grid,
-    .skills-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
