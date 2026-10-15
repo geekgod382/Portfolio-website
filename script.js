@@ -1,3 +1,33 @@
+// Dot-and-ring cursor for mouse and trackpad users
+const customCursor = document.querySelector('.custom-cursor');
+const cursorRing = document.querySelector('.custom-cursor-ring');
+const cursorDot = document.querySelector('.custom-cursor-dot');
+
+if (customCursor && cursorRing && cursorDot && window.matchMedia('(pointer: fine)').matches) {
+    document.body.classList.add('custom-cursor-enabled');
+
+    document.addEventListener('pointermove', (event) => {
+        if (event.pointerType !== 'mouse') return;
+
+        const position = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
+        cursorRing.style.transform = position;
+        cursorDot.style.transform = position;
+        customCursor.classList.add('visible');
+    });
+
+    document.addEventListener('pointerleave', () => {
+        customCursor.classList.remove('visible');
+    });
+
+    document.addEventListener('pointerdown', () => {
+        cursorRing.style.transform += ' scale(0.8)';
+    });
+
+    document.addEventListener('pointerup', () => {
+        cursorRing.style.transform = cursorRing.style.transform.replace(' scale(0.8)', '');
+    });
+}
+
 // Mobile navigation
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');

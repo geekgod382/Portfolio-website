@@ -41,6 +41,56 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.custom-cursor {
+    display: none;
+}
+
+@media (pointer: fine) {
+    body.custom-cursor-enabled,
+    body.custom-cursor-enabled a,
+    body.custom-cursor-enabled button {
+        cursor: none;
+    }
+
+    body.custom-cursor-enabled .custom-cursor {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        color: var(--accent);
+    }
+
+    body.custom-cursor-enabled .custom-cursor.visible {
+        opacity: 1;
+    }
+
+    .custom-cursor-ring,
+    .custom-cursor-dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        background: transparent;
+        will-change: transform;
+    }
+
+    .custom-cursor-ring {
+        width: 54px;
+        height: 54px;
+        border: 2px solid var(--accent);
+        transition: transform 0.14s ease-out;
+    }
+
+    .custom-cursor-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--accent);
+    }
+}
+
 ::selection {
     background: var(--accent-dim);
     color: var(--accent);
@@ -738,5 +788,9 @@ section {
     .reveal {
         opacity: 1;
         transform: none;
+    }
+
+    .custom-cursor-ring {
+        transition: none;
     }
 }
