@@ -1,5 +1,5 @@
 (() => {
-    const MESSAGES = ["Hey there! Welcome to my website"];
+    const MESSAGES = ["Hey there! Welcome to my website", "You like it here?", "I fly around while you browse", "and lemme tell you something,", "This guy is a great developer"];
     const SHOW_FIRST_AFTER_MS = 3000;   // first greeting delay
     const MESSAGE_VISIBLE_MS = 3000;    // how long a bubble stays
     const ACCENT = 0x00e5ff;            // glow color
@@ -142,10 +142,17 @@
         bubbleTimeout = setTimeout(() => { bubble.style.opacity = 0; }, MESSAGE_VISIBLE_MS);
     }
     
+    function sayNextMessage() {
+        if (msgIndex >= 5){
+            return;
+        }
+        say(MESSAGES[msgIndex++ % MESSAGES.length]);
+    }
+
     // fly in from the left edge
     pos.set(-bounds().hw - 3, 0, 0);
     pickTarget();
-    setTimeout(() => { hovering = true; hoverTimer = 3; say(MESSAGES[msgIndex++ % MESSAGES.length]); }, SHOW_FIRST_AFTER_MS);
+    setTimeout(() => { hovering = true; hoverTimer = 3; sayNextMessage(); }, SHOW_FIRST_AFTER_MS);
     
     // ---- Loop ----
     const clock = new THREE.Clock();
@@ -166,6 +173,7 @@
         if (pos.distanceTo(target) < 0.35 && vel.length() < 0.8) {
             hovering = true;
             hoverTimer = 1.2 + Math.random() * 2;
+            sayNextMessage();
         }
         } else {
         vel.multiplyScalar(Math.max(0, 1 - 3 * dt)); // settle
